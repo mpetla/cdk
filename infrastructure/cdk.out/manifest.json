@@ -1,0 +1,565 @@
+{
+  "version": "1.10.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "InfrastructureStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "InfrastructureStack.template.json"
+      },
+      "metadata": {
+        "/InfrastructureStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec",
+              "id": "212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec",
+              "packaging": "zip",
+              "sourceHash": "212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec",
+              "s3BucketParameter": "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecS3BucketADAEF63E",
+              "s3KeyParameter": "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecS3VersionKeyAF33B75B",
+              "artifactHashParameter": "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecArtifactHash77DBA9B6"
+            },
+            "trace": [
+              "InfrastructureStack.addFileAsset (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:508:17)",
+              "new Asset (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:113:28)",
+              "AssetCode.bind (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:433:29)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:18:26)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/SiteBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteBucket397A1860",
+            "trace": [
+              "new Bucket (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:942:22)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:10:24)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/Foobar/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FoobarServiceRoleE432D448",
+            "trace": [
+              "new Role (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:300:18)",
+              "new Function (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:416:31)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:18:26)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/Foobar/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Foobar96AA634F",
+            "trace": [
+              "new Function (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:436:35)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:18:26)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/AssetParameters/212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecS3BucketADAEF63E",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:16:32)",
+              "InfrastructureStack.addFileAsset (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:495:16)",
+              "new Asset (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:113:28)",
+              "AssetCode.bind (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:433:29)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:18:26)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/AssetParameters/212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecS3VersionKeyAF33B75B",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:21:31)",
+              "InfrastructureStack.addFileAsset (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:495:16)",
+              "new Asset (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:113:28)",
+              "AssetCode.bind (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:433:29)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:18:26)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/AssetParameters/212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecArtifactHash77DBA9B6",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:26:36)",
+              "InfrastructureStack.addFileAsset (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:495:16)",
+              "new Asset (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:113:28)",
+              "AssetCode.bind (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:433:29)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:18:26)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/foobar-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "foobarapiB6ECC7BC",
+            "trace": [
+              "new RestApi (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:222:22)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/foobar-api/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "foobarapiDeployment0BF5791A6764bad70b4f9cff370d5b24da2f6be2",
+            "trace": [
+              "new Deployment (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\deployment.ts:69:21)",
+              "RestApi.configureDeployment (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:380:32)",
+              "new RestApi (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:238:10)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/foobar-api/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "foobarapiDeploymentStageprodC7140784",
+            "trace": [
+              "new Stage (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\stage.ts:186:22)",
+              "RestApi.configureDeployment (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:390:30)",
+              "new RestApi (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:238:10)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/foobar-api/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "foobarapiEndpointA34598A4",
+            "trace": [
+              "RestApi.configureDeployment (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:395:7)",
+              "new RestApi (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:238:10)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/foobar-api/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "foobarapiCloudWatchRole166EDED4",
+            "trace": [
+              "new Role (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:300:18)",
+              "RestApi.configureCloudWatchRole (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:404:18)",
+              "new RestApi (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:242:12)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/foobar-api/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "foobarapiAccount21AA5ED2",
+            "trace": [
+              "RestApi.configureCloudWatchRole (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:409:22)",
+              "new RestApi (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:242:12)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:24:17)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/foobar-api/Default/GET/ApiPermission.InfrastructureStackfoobarapiFC905337.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "foobarapiGETApiPermissionInfrastructureStackfoobarapiFC905337GETE127C377",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:197:5)",
+              "LambdaIntegration.bind (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.ts:60:18)",
+              "Method.renderIntegration (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:189:17)",
+              "new Method (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:130:25)",
+              "RootResource.addMethod (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:175:12)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:33:14)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/foobar-api/Default/GET/ApiPermission.Test.InfrastructureStackfoobarapiFC905337.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "foobarapiGETApiPermissionTestInfrastructureStackfoobarapiFC905337GET4079CCA5",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:197:5)",
+              "LambdaIntegration.bind (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.ts:68:20)",
+              "Method.renderIntegration (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:189:17)",
+              "new Method (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:130:25)",
+              "RootResource.addMethod (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:175:12)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:33:14)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/foobar-api/Default/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "foobarapiGET77244D74",
+            "trace": [
+              "new Method (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:136:22)",
+              "RootResource.addMethod (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:175:12)",
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:33:14)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/BucketName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketName",
+            "trace": [
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:35:5)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/InfrastructureStack/BucketWebsiteUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketWebsiteUrl",
+            "trace": [
+              "new InfrastructureStack (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\lib\\infrastructure-stack.ts:36:5)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\bin\\infrastructure.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:493:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\index.ts:496:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "Object.<anonymous> (C:\\Users\\Michał\\Projects\\cdk\\infrastructure\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.14.0",
+      "@aws-cdk/cx-api": "1.14.0",
+      "@aws-cdk/aws-s3": "1.14.0",
+      "@aws-cdk/aws-events": "1.14.0",
+      "@aws-cdk/aws-iam": "1.14.0",
+      "@aws-cdk/region-info": "1.14.0",
+      "@aws-cdk/aws-kms": "1.14.0",
+      "@aws-cdk/aws-lambda": "1.14.0",
+      "@aws-cdk/aws-cloudwatch": "1.14.0",
+      "@aws-cdk/aws-ec2": "1.14.0",
+      "@aws-cdk/aws-ssm": "1.14.0",
+      "@aws-cdk/aws-sqs": "1.14.0",
+      "@aws-cdk/aws-s3-assets": "1.14.0",
+      "@aws-cdk/assets": "1.14.0",
+      "@aws-cdk/aws-apigateway": "1.14.0",
+      "jsii-runtime": "node.js/v10.14.2"
+    }
+  }
+}

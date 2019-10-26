@@ -1,0 +1,391 @@
+{
+  "Resources": {
+    "SiteBucket397A1860": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "foobar.test.mp",
+        "WebsiteConfiguration": {
+          "ErrorDocument": "error.html",
+          "IndexDocument": "index.html"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/SiteBucket/Resource"
+      }
+    },
+    "FoobarServiceRoleE432D448": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/Foobar/ServiceRole/Resource"
+      }
+    },
+    "Foobar96AA634F": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecS3BucketADAEF63E"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecS3VersionKeyAF33B75B"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecS3VersionKeyAF33B75B"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "foobar.main",
+        "Role": {
+          "Fn::GetAtt": [
+            "FoobarServiceRoleE432D448",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x"
+      },
+      "DependsOn": [
+        "FoobarServiceRoleE432D448"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/Foobar/Resource",
+        "aws:asset:path": "asset.212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec",
+        "aws:asset:property": "Code"
+      }
+    },
+    "foobarapiB6ECC7BC": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Description": "This service serves foobar.",
+        "Name": "Foobar Service"
+      },
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/foobar-api/Resource"
+      }
+    },
+    "foobarapiDeployment0BF5791A6764bad70b4f9cff370d5b24da2f6be2": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "foobarapiB6ECC7BC"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "foobarapiGET77244D74"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/foobar-api/Deployment/Resource"
+      }
+    },
+    "foobarapiDeploymentStageprodC7140784": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "foobarapiB6ECC7BC"
+        },
+        "DeploymentId": {
+          "Ref": "foobarapiDeployment0BF5791A6764bad70b4f9cff370d5b24da2f6be2"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/foobar-api/DeploymentStage.prod/Resource"
+      }
+    },
+    "foobarapiCloudWatchRole166EDED4": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/foobar-api/CloudWatchRole/Resource"
+      }
+    },
+    "foobarapiAccount21AA5ED2": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "foobarapiCloudWatchRole166EDED4",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "foobarapiB6ECC7BC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/foobar-api/Account"
+      }
+    },
+    "foobarapiGETApiPermissionInfrastructureStackfoobarapiFC905337GETE127C377": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "Foobar96AA634F",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "foobarapiB6ECC7BC"
+              },
+              "/",
+              {
+                "Ref": "foobarapiDeploymentStageprodC7140784"
+              },
+              "/GET/"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/foobar-api/Default/GET/ApiPermission.InfrastructureStackfoobarapiFC905337.GET.."
+      }
+    },
+    "foobarapiGETApiPermissionTestInfrastructureStackfoobarapiFC905337GET4079CCA5": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "Foobar96AA634F",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "foobarapiB6ECC7BC"
+              },
+              "/test-invoke-stage/GET/"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/foobar-api/Default/GET/ApiPermission.Test.InfrastructureStackfoobarapiFC905337.GET.."
+      }
+    },
+    "foobarapiGET77244D74": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Fn::GetAtt": [
+            "foobarapiB6ECC7BC",
+            "RootResourceId"
+          ]
+        },
+        "RestApiId": {
+          "Ref": "foobarapiB6ECC7BC"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "RequestTemplates": {
+            "application/json": "{ \"statusCode\": \"200\" }"
+          },
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "Foobar96AA634F",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "InfrastructureStack/foobar-api/Default/GET/Resource"
+      }
+    }
+  },
+  "Parameters": {
+    "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecS3BucketADAEF63E": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec\""
+    },
+    "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecS3VersionKeyAF33B75B": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec\""
+    },
+    "AssetParameters212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fecArtifactHash77DBA9B6": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec\""
+    }
+  },
+  "Outputs": {
+    "foobarapiEndpointA34598A4": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "foobarapiB6ECC7BC"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "foobarapiDeploymentStageprodC7140784"
+            },
+            "/"
+          ]
+        ]
+      }
+    },
+    "BucketName": {
+      "Value": {
+        "Ref": "SiteBucket397A1860"
+      }
+    },
+    "BucketWebsiteUrl": {
+      "Value": {
+        "Fn::GetAtt": [
+          "SiteBucket397A1860",
+          "WebsiteURL"
+        ]
+      }
+    }
+  }
+}

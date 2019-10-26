@@ -1,0 +1,171 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": [
+      {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      {
+        "id": "InfrastructureStack",
+        "path": "InfrastructureStack",
+        "children": [
+          {
+            "id": "SiteBucket",
+            "path": "InfrastructureStack/SiteBucket",
+            "children": [
+              {
+                "id": "Resource",
+                "path": "InfrastructureStack/SiteBucket/Resource"
+              },
+              {
+                "id": "Notifications",
+                "path": "InfrastructureStack/SiteBucket/Notifications"
+              }
+            ]
+          },
+          {
+            "id": "Foobar",
+            "path": "InfrastructureStack/Foobar",
+            "children": [
+              {
+                "id": "ServiceRole",
+                "path": "InfrastructureStack/Foobar/ServiceRole",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "InfrastructureStack/Foobar/ServiceRole/Resource"
+                  }
+                ]
+              },
+              {
+                "id": "Code",
+                "path": "InfrastructureStack/Foobar/Code",
+                "children": [
+                  {
+                    "id": "Stage",
+                    "path": "InfrastructureStack/Foobar/Code/Stage"
+                  },
+                  {
+                    "id": "AssetBucket",
+                    "path": "InfrastructureStack/Foobar/Code/AssetBucket"
+                  }
+                ]
+              },
+              {
+                "id": "Resource",
+                "path": "InfrastructureStack/Foobar/Resource"
+              }
+            ]
+          },
+          {
+            "id": "AssetParameters",
+            "path": "InfrastructureStack/AssetParameters",
+            "children": [
+              {
+                "id": "212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec",
+                "path": "InfrastructureStack/AssetParameters/212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec",
+                "children": [
+                  {
+                    "id": "S3Bucket",
+                    "path": "InfrastructureStack/AssetParameters/212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec/S3Bucket"
+                  },
+                  {
+                    "id": "S3VersionKey",
+                    "path": "InfrastructureStack/AssetParameters/212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec/S3VersionKey"
+                  },
+                  {
+                    "id": "ArtifactHash",
+                    "path": "InfrastructureStack/AssetParameters/212bfef261f462e8446939dbf99329608d6c1b0283c57ba889cd275c80e91fec/ArtifactHash"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "foobar-api",
+            "path": "InfrastructureStack/foobar-api",
+            "children": [
+              {
+                "id": "Resource",
+                "path": "InfrastructureStack/foobar-api/Resource"
+              },
+              {
+                "id": "Deployment",
+                "path": "InfrastructureStack/foobar-api/Deployment",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "InfrastructureStack/foobar-api/Deployment/Resource"
+                  }
+                ]
+              },
+              {
+                "id": "DeploymentStage.prod",
+                "path": "InfrastructureStack/foobar-api/DeploymentStage.prod",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "InfrastructureStack/foobar-api/DeploymentStage.prod/Resource"
+                  }
+                ]
+              },
+              {
+                "id": "Endpoint",
+                "path": "InfrastructureStack/foobar-api/Endpoint"
+              },
+              {
+                "id": "CloudWatchRole",
+                "path": "InfrastructureStack/foobar-api/CloudWatchRole",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "InfrastructureStack/foobar-api/CloudWatchRole/Resource"
+                  }
+                ]
+              },
+              {
+                "id": "Account",
+                "path": "InfrastructureStack/foobar-api/Account"
+              },
+              {
+                "id": "Default",
+                "path": "InfrastructureStack/foobar-api/Default",
+                "children": [
+                  {
+                    "id": "GET",
+                    "path": "InfrastructureStack/foobar-api/Default/GET",
+                    "children": [
+                      {
+                        "id": "ApiPermission.InfrastructureStackfoobarapiFC905337.GET..",
+                        "path": "InfrastructureStack/foobar-api/Default/GET/ApiPermission.InfrastructureStackfoobarapiFC905337.GET.."
+                      },
+                      {
+                        "id": "ApiPermission.Test.InfrastructureStackfoobarapiFC905337.GET..",
+                        "path": "InfrastructureStack/foobar-api/Default/GET/ApiPermission.Test.InfrastructureStackfoobarapiFC905337.GET.."
+                      },
+                      {
+                        "id": "Resource",
+                        "path": "InfrastructureStack/foobar-api/Default/GET/Resource"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "BucketName",
+            "path": "InfrastructureStack/BucketName"
+          },
+          {
+            "id": "BucketWebsiteUrl",
+            "path": "InfrastructureStack/BucketWebsiteUrl"
+          }
+        ]
+      }
+    ]
+  }
+}
